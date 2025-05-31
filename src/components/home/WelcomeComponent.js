@@ -38,7 +38,6 @@ export default function WelcomeComponent() {
 
           <Typography
             variant="body1"
-            color="textSecondary"
             mt={2}
             maxWidth="md"
             mx="auto"

@@ -17,7 +17,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import CustomButton from '../custom-button/CustomButton';
-import WhatsAppFloatButton from '../whats-app-button/WhatsAppFloatButton';
 import { usePathname, useRouter } from 'next/navigation';
 
 const navItems = [
@@ -55,9 +54,6 @@ function DrawerAppBar(props) {
             onClick={() => router.push("/contact")}
             name="Let’s Build"
           />
-        </Box>
-        <Box>
-          <WhatsAppFloatButton />
         </Box>
       </Box>
     </Box>
@@ -108,10 +104,6 @@ function DrawerAppBar(props) {
             />
 
             <Box className='vertical-line'></Box>
-
-            <Box>
-              <WhatsAppFloatButton />
-            </Box>
           </Box>
         </Toolbar>
       </AppBar>

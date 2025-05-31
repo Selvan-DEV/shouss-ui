@@ -25,8 +25,8 @@ const FooterComponent = () => {
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
-            justifyContent: 'space-between',
-            gap: 4,
+            justifyContent: 'space-around',
+            gap: 2,
             flexWrap: 'wrap',
           }}
         >
@@ -57,7 +57,7 @@ const FooterComponent = () => {
             }}
           >
             <Box>
-              <Typography variant="h6" gutterBottom>Company</Typography>
+              <Typography variant="h6" gutterBottom>Quick Links</Typography>
               {[
                 { page: "Home", url: "/" },
                 { page: "About Us", url: "/about" },
@@ -66,15 +66,6 @@ const FooterComponent = () => {
               ].map((item) => (
                 <Typography key={item.url} variant="body2" sx={{ mb: 2 }}>
                   <Link href={item.url} underline="hover" color="inherit">{item.page}</Link>
-                </Typography>
-              ))}
-            </Box>
-
-            <Box>
-              <Typography variant="h6" gutterBottom>Quick Links</Typography>
-              {['Offers', 'Our Projects', 'Packages', 'Services'].map((item) => (
-                <Typography key={item} variant="body2" sx={{ mb: 2 }}>
-                  <Link href="#" underline="hover" color="inherit">{item}</Link>
                 </Typography>
               ))}
             </Box>
