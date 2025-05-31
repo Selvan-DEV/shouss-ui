@@ -10,6 +10,11 @@ const theme = createTheme({
       fontFamily: 'var(--font-inter-tight)',
     },
 
+    // h1 uses Inter Tight
+    h2: {
+      fontFamily: 'var(--font-inter-tight)',
+    },
+
     // Paragraphs and other variants use Inter Regular
     body1: {
       fontFamily: 'var(--font-inter)',
