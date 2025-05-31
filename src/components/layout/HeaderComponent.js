@@ -103,7 +103,7 @@ function DrawerAppBar(props) {
             ))}
 
             <CustomButton
-              onClick={() => router.push(item.url)}
+              onClick={() => router.push('/contact')}
               name="Let’s Build"
             />
 

@@ -4,8 +4,11 @@ import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import CustomButton from '../custom-button/CustomButton';
+import { useRouter } from 'next/navigation';
 
 export default function WelcomeComponent() {
+  const router = useRouter();
+
   return (
     <Box px={{ xs: 2, sm: 4, md: 10 }} py={6}>
       <Container>
@@ -74,7 +77,7 @@ export default function WelcomeComponent() {
 
             <Box mt={3}>
               <CustomButton
-                onClick={() => console.log()}
+                onClick={() => router.push('/contact')}
                 name="Get a Free Quote"
                 width="200px"
               />

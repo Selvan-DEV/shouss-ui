@@ -4,7 +4,6 @@ import React from 'react';
 import {
   Box,
   Typography,
-  Link as MuiLink,
   IconButton,
   Divider,
   Container,
@@ -14,8 +13,11 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Image from 'next/image';
 import CustomButton from '../custom-button/CustomButton';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const FooterComponent = () => {
+  const router = useRouter();
   return (
     <Box sx={{ bgcolor: '#000000', color: '#fff', py: 6 }}>
       <Container>
@@ -42,7 +44,7 @@ const FooterComponent = () => {
             <Typography variant="subtitle1" sx={{ fontSize: '18px', fontWeight: 600 }}>
               Top-Rated Home Builders in Bengaluru
             </Typography>
-            <CustomButton onClick={() => console.log()} name="Get a Quote" width="184px" />
+            <CustomButton onClick={() => router.push('/contact')} name="Get a Quote" width="184px" />
           </Box>
 
           {/* Middle: Links */}
@@ -56,9 +58,14 @@ const FooterComponent = () => {
           >
             <Box>
               <Typography variant="h6" gutterBottom>Company</Typography>
-              {['Home', 'About Us', 'Contact Us', 'Get a Quote'].map((item) => (
-                <Typography key={item} variant="body2" sx={{ mb: 2 }}>
-                  <MuiLink href="#" underline="hover" color="inherit">{item}</MuiLink>
+              {[
+                { page: "Home", url: "/" },
+                { page: "About Us", url: "/about" },
+                { page: "Services", url: "/services" },
+                { page: "Packages", url: "/packages" },
+              ].map((item) => (
+                <Typography key={item.url} variant="body2" sx={{ mb: 2 }}>
+                  <Link href={item.url} underline="hover" color="inherit">{item.page}</Link>
                 </Typography>
               ))}
             </Box>
@@ -67,7 +74,7 @@ const FooterComponent = () => {
               <Typography variant="h6" gutterBottom>Quick Links</Typography>
               {['Offers', 'Our Projects', 'Packages', 'Services'].map((item) => (
                 <Typography key={item} variant="body2" sx={{ mb: 2 }}>
-                  <MuiLink href="#" underline="hover" color="inherit">{item}</MuiLink>
+                  <Link href="#" underline="hover" color="inherit">{item}</Link>
                 </Typography>
               ))}
             </Box>
