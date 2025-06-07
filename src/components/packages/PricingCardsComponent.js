@@ -1,50 +1,65 @@
 "use client";
 
 import React from 'react';
-import { Box, Grid, Typography, Button, Paper, Container } from '@mui/material';
+import { Box, Grid, Typography, Paper, Container } from '@mui/material';
 import CustomButton from '../custom-button/CustomButton';
 
 const plans = [
     {
         title: 'Standard',
         price: '1850/sq.ft',
+        subTitle: 'Affordable, Reliable, Functional',
+        description: "Perfect for budget-conscious homeowners who want quality construction with essential features:",
         features: [
-            'Professional Specialist',
-            'Brilliant Ideas',
-            'Precise Builders',
-            '24/7 Assistance',
-            'Professional Specialist',
-            'Brilliant Ideas',
-            'Precise Builders',
-            '24/7 Assistance',
+            'Customised Architectural Design',
+            'RCC Framed Structure',
+            'Site Engineer for Daily Supervision',
+            'Quality-Checked Materials',
+            'Up to 10-Year Structural Warranty',
+            '24/7 Customer Support',
+            'Basic Vitrified Flooring',
+            'Branded Electrical & Plumbing Material',
+            'Cement-Based Waterproofing',
+            'Timely Project Updates'
         ],
     },
     {
         title: 'Premium',
         price: '1999/sq.ft',
+        subTitle: 'Stylish, Durable, Comfortable',
+        description: "A great balance between quality and aesthetics – upgraded materials, better finishes, and modern features:",
         features: [
-            'Professional Specialist',
-            'Brilliant Ideas',
-            'Precise Builders',
-            '24/7 Assistance',
-            'Professional Specialist',
-            'Brilliant Ideas',
-            'Precise Builders',
-            '24/7 Assistance',
+            'Everything in Standard, plus:',
+            '3D Elevation & Interior Concepts',
+            'Premium Flooring (Granite/Vitrified/Combination)',
+            'Modular Kitchen Setup',
+            'Designer Bathroom Fixtures (Jaquar/Equivalent)',
+            'False Ceiling in Living & Bedrooms',
+            'UPVC Windows with Mesh',
+            'Branded Modular Switches (Anchor/Legrand)',
+            'Enhanced Waterproofing System',
+            'Improved Paint & Finishing (Premium Emulsion)',
+            'Project Manager Support'
         ],
     },
     {
         title: 'Luxury',
         price: '2500/sq.ft',
+        subTitle: 'Elegant, Bespoke, Top-tier',
+        description: "For those who seek the finest – high-end finishes, premium materials, and personalized design options:",
         features: [
-            'Professional Specialist',
-            'Brilliant Ideas',
-            'Precise Builders',
-            '24/7 Assistance',
-            'Professional Specialist',
-            'Brilliant Ideas',
-            'Precise Builders',
-            '24/7 Assistance',
+            'Everything in Premium, plus:',
+            'Bespoke Architecture + Luxury Interior Design',
+            'Italian Marble / Wooden Flooring',
+            'Full Smart Home Integration',
+            'Kohler/Grohe Fixtures',
+            'Designer Main Door & Wardrobes',
+            'Advanced Home Automation (Lighting, Security)',
+            'Imported False Ceiling with Cove Lighting',
+            'Complete Modular Kitchen with Appliances',
+            'Solar Power & Rainwater Harvesting Setup',
+            'Dedicated Relationship Manager',
+            'Up to 15-Year Warranty'
         ],
     },
 ];
@@ -66,12 +81,15 @@ const PricingCardsComponent = () => {
                                     <Typography variant="h4" fontWeight="bold" color="white" sx={{ fontSize: "48px" }}>
                                         {plan.title}
                                     </Typography>
+                                    <Typography variant="subtitle1" color="white" sx={{ fontSize: "18px" }}>
+                                        {plan.subTitle}
+                                    </Typography>
                                 </Box>
 
                                 {/* Feature Section */}
-                                <Box sx={{ backgroundColor: 'black', color: 'white', p: 3 }}>
-                                    <Typography variant="h6" gutterBottom>
-                                        Let us help you create a home that truly reflects you.
+                                <Box sx={{ backgroundColor: 'black', color: 'white', p: 3, minHeight: '815px' }}>
+                                    <Typography variant="h6" gutterBottom sx={{ fontSize: "15px" }}>
+                                        {plan.description}
                                     </Typography>
                                     <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0, mt: 3 }}>
                                         {plan.features.map((feature, i) => (
@@ -85,7 +103,7 @@ const PricingCardsComponent = () => {
                                     </Box>
 
                                     {/* Button */}
-                                    <Box mt={3} mb={2} textAlign="center">
+                                    <Box mt={'auto'} mb={2} textAlign="center">
                                         <CustomButton width="200px" name="Get a Free Qoute" />
                                     </Box>
                                 </Box>

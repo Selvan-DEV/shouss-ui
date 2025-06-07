@@ -21,10 +21,6 @@ const services = [
         icon: "/icons/Brick Wall.png",
     },
     {
-        isImage: true,
-        imageUrl: "/images/landscape.png",
-    },
-    {
         title: "Landscape Design",
         description:
             "Transforming outdoor spaces into beautiful, functional environments that connect with nature.",

@@ -18,7 +18,7 @@ export default function WelcomeComponent() {
             variant="subtitle1"
             sx={{ fontWeight: 500, fontSize: "18px", color: "var(--app-primary-color)" }}
           >
-            Welcome to the sHouss Constructions
+            Welcome to the sHouss Design and Build
           </Typography>
 
           <Typography

@@ -67,7 +67,7 @@ function DrawerAppBar(props) {
       <AppBar component="nav" position="static" sx={{
         borderTopLeftRadius: "10px",
         borderTopRightRadius: "10px",
-        backgroundColor: "var(--foreground)",
+        backgroundColor: "#000",
       }}
       >
         <Toolbar sx={{ margin: "30px" }}>

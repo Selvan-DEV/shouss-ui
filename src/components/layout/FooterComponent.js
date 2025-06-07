@@ -72,8 +72,9 @@ const FooterComponent = () => {
 
             <Box>
               <Typography variant="h6" gutterBottom>Reach Us</Typography>
-              <Typography variant="body2" sx={{ mb: 2 }}>No: 007, New Address,</Typography>
-              <Typography variant="body2" sx={{ mb: 2 }}>Old Country, India</Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>164, 1st Cross Rd, Judicial Colony</Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>AECS Layout 1st Stage, Sanjayanagara</Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>Bengaluru, Karnataka-560094</Typography>
               <Typography variant="body2" sx={{ mb: 2 }}>+91 938 098 8205</Typography>
               <Typography variant="body2" sx={{ mb: 2 }}>+91 636 960 7513</Typography>
             </Box>
