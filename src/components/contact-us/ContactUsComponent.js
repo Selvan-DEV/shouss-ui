@@ -42,9 +42,26 @@ const ContactUsComponent = () => {
         },
     });
 
-    const onSubmit = (data) => {
-        console.log('Form submitted:', data);
-        reset(); // reset form after submission
+    const onSubmit = async (data) => {
+        const res = await fetch('/api/contact', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: data.fullName,
+                email: data.email,
+                message: data.message,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        const result = await res.json();
+        if (result.success) {
+            reset();
+        } else {
+            console.error("Failed to send. Try again.");
+        }
+
     };
 
     return (
