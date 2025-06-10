@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Typography, Card, CardMedia, Divider } from '@mui/material'
+import { Box, Container, Typography, Divider } from '@mui/material'
 import React from 'react';
 import EastIcon from '@mui/icons-material/East';
 import CustomButton from '../custom-button/CustomButton';
@@ -24,7 +24,7 @@ export default function AboutComponent() {
                             color="error"
                             sx={{ fontWeight: 500, fontSize: "18px" }}
                         >
-                            Welcome to the sHouss Constructions
+                            Welcome to the sHouss Design and Build
                         </Typography>
 
                         <Typography

@@ -26,7 +26,8 @@ const schema = yup.object({
     message: yup.string().required('Please describe your project'),
 });
 
-const ContactUsComponent = () => {
+const ContactUsComponent = (props) => {
+    const { isModal, handleClose } = props;
     const {
         handleSubmit,
         control,
@@ -58,6 +59,9 @@ const ContactUsComponent = () => {
         const result = await res.json();
         if (result.success) {
             reset();
+            if (handleClose) {
+                handleClose();
+            }
         } else {
             console.error("Failed to send. Try again.");
         }
@@ -65,10 +69,10 @@ const ContactUsComponent = () => {
     };
 
     return (
-        <Box sx={{ padding: '0 15px', marginTop: "-30px" }}>
+        <Box sx={{ padding: '0 15px', marginTop: !isModal ? "-30px" : "10px" }}>
             {/* Contact Form */}
             <Box sx={{
-                backgroundColor: "var(--foreground)",
+                backgroundColor: !isModal ? "var(--foreground)" : "#FFFF",
                 paddingBottom: "20px", borderBottomRightRadius: "10px", borderBottomLeftRadius: "10px"
             }}>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -88,7 +92,7 @@ const ContactUsComponent = () => {
                                             helperText={errors.fullName?.message}
                                             sx={{
                                                 "& .MuiOutlinedInput-root": {
-                                                    backgroundColor: "#000",
+                                                    backgroundColor: !isModal ? "#000" : "#FFFF",
                                                     borderRadius: 1,
                                                     "& fieldset": {
                                                         borderColor: "gray",
@@ -101,7 +105,7 @@ const ContactUsComponent = () => {
                                                     },
                                                 },
                                                 "& .MuiInputBase-input": {
-                                                    color: "white",
+                                                    color: !isModal ? "white" : "#000",
                                                 },
                                                 "& .MuiInputLabel-root": {
                                                     color: "#aaa",
@@ -129,7 +133,7 @@ const ContactUsComponent = () => {
                                             helperText={errors.phone?.message}
                                             sx={{
                                                 "& .MuiOutlinedInput-root": {
-                                                    backgroundColor: "#000",
+                                                    backgroundColor: !isModal ? "#000" : "#FFFF",
                                                     borderRadius: 1,
                                                     "& fieldset": {
                                                         borderColor: "gray",
@@ -142,7 +146,7 @@ const ContactUsComponent = () => {
                                                     },
                                                 },
                                                 "& .MuiInputBase-input": {
-                                                    color: "white", // ← White input text
+                                                    color: !isModal ? "white" : "#000",
                                                 },
                                                 "& .MuiInputLabel-root": {
                                                     color: "#aaa",
@@ -170,7 +174,7 @@ const ContactUsComponent = () => {
                                             helperText={errors.email?.message}
                                             sx={{
                                                 "& .MuiOutlinedInput-root": {
-                                                    backgroundColor: "#000",
+                                                    backgroundColor: !isModal ? "#000" : "#FFFF",
                                                     borderRadius: 1,
                                                     "& fieldset": {
                                                         borderColor: "gray",
@@ -183,7 +187,7 @@ const ContactUsComponent = () => {
                                                     },
                                                 },
                                                 "& .MuiInputBase-input": {
-                                                    color: "white", // ← White input text
+                                                    color: !isModal ? "white" : "#000",
                                                 },
                                                 "& .MuiInputLabel-root": {
                                                     color: "#aaa",
@@ -214,7 +218,7 @@ const ContactUsComponent = () => {
                                             helperText={errors.message?.message}
                                             sx={{
                                                 "& .MuiOutlinedInput-root": {
-                                                    backgroundColor: "#000",
+                                                    backgroundColor: !isModal ? "#000" : "#FFFF",
                                                     borderRadius: 1,
                                                     "& fieldset": {
                                                         borderColor: "gray",
@@ -227,7 +231,7 @@ const ContactUsComponent = () => {
                                                     },
                                                 },
                                                 "& .MuiInputBase-input": {
-                                                    color: "white", // ← White input text
+                                                    color: !isModal ? "white" : "#000",
                                                 },
                                                 "& .MuiInputLabel-root": {
                                                     color: "#aaa",
@@ -248,97 +252,100 @@ const ContactUsComponent = () => {
                     </Container>
                 </form>
             </Box>
-            <Container>
-                {/* Contact Info Cards */}
-                <Box sx={{ p: 4, backgroundColor: '#fff' }}>
-                    <Typography
-                        variant="subtitle1"
-                        textAlign={"center"}
-                        sx={{ fontWeight: 500, fontSize: "18px", color: "var(--app-primary-color)", mb: 4 }}
-                    >
-                        Reach Us
-                    </Typography>
+            {!isModal && (
+                <Container>
+                    {/* Contact Info Cards */}
+                    <Box sx={{ p: 4, backgroundColor: '#fff' }}>
+                        <Typography
+                            variant="subtitle1"
+                            textAlign={"center"}
+                            sx={{ fontWeight: 500, fontSize: "18px", color: "var(--app-primary-color)", mb: 4 }}
+                        >
+                            Reach Us
+                        </Typography>
 
-                    <Grid container spacing={3} justifyContent="center">
-                        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-                            <Paper
-                                sx={{
-                                    backgroundColor: '#c72d3d',
-                                    color: 'white',
-                                    p: 3,
-                                    borderRadius: 2,
-                                    textAlign: "center"
-                                }}
-                                elevation={4}
-                            >
+                        <Grid container spacing={3} justifyContent="center">
+                            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                                <Paper
+                                    sx={{
+                                        backgroundColor: '#c72d3d',
+                                        color: 'white',
+                                        p: 3,
+                                        borderRadius: 2,
+                                        textAlign: "center"
+                                    }}
+                                    elevation={4}
+                                >
 
-                                <PermPhoneMsgIcon fontSize="large" />
-                                <Typography variant="subtitle1" mt={1}>
-                                    Call Us
-                                </Typography>
-                                <Typography variant="body1" sx={{ fontSize: "18px" }}>91123–456–7890</Typography>
-                                <Typography variant="body1" sx={{ fontSize: "18px" }}>91123–456–7891</Typography>
+                                    <PermPhoneMsgIcon fontSize="large" />
+                                    <Typography variant="subtitle1" mt={1}>
+                                        Call Us
+                                    </Typography>
+                                    <Typography variant="body1" sx={{ fontSize: "18px" }}>91123–456–7890</Typography>
+                                    <Typography variant="body1" sx={{ fontSize: "18px" }}>91123–456–7891</Typography>
 
-                            </Paper>
+                                </Paper>
+                            </Grid>
+
+                            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                                <Paper
+                                    sx={{
+                                        backgroundColor: '#c72d3d',
+                                        color: 'white',
+                                        p: 3,
+                                        borderRadius: 2,
+                                        textAlign: 'center',
+                                    }}
+                                    elevation={4}
+                                >
+                                    <EmailIcon fontSize="large" />
+                                    <Typography variant="subtitle1" mt={1}>
+                                        Our Email
+                                    </Typography>
+                                    <Typography variant="body1">info@example.com</Typography>
+                                    <Typography variant="body1">info@example.com</Typography>
+                                </Paper>
+                            </Grid>
+
+                            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                                <Paper
+                                    sx={{
+                                        backgroundColor: '#c72d3d',
+                                        color: 'white',
+                                        p: 3,
+                                        borderRadius: 2,
+                                        textAlign: 'center',
+                                    }}
+                                    elevation={4}
+                                >
+                                    <LocationIcon fontSize="large" />
+                                    <Typography variant="subtitle1" mt={1}>
+                                        Our Location
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        125, Central Square,<br />
+                                        Bengaluru, India
+                                    </Typography>
+                                </Paper>
+                            </Grid>
                         </Grid>
 
-                        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-                            <Paper
-                                sx={{
-                                    backgroundColor: '#c72d3d',
-                                    color: 'white',
-                                    p: 3,
-                                    borderRadius: 2,
-                                    textAlign: 'center',
-                                }}
-                                elevation={4}
-                            >
-                                <EmailIcon fontSize="large" />
-                                <Typography variant="subtitle1" mt={1}>
-                                    Our Email
-                                </Typography>
-                                <Typography variant="body1">info@example.com</Typography>
-                                <Typography variant="body1">info@example.com</Typography>
-                            </Paper>
-                        </Grid>
-
-                        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-                            <Paper
-                                sx={{
-                                    backgroundColor: '#c72d3d',
-                                    color: 'white',
-                                    p: 3,
-                                    borderRadius: 2,
-                                    textAlign: 'center',
-                                }}
-                                elevation={4}
-                            >
-                                <LocationIcon fontSize="large" />
-                                <Typography variant="subtitle1" mt={1}>
-                                    Our Location
-                                </Typography>
-                                <Typography variant="body1">
-                                    125, Central Square,<br />
-                                    Bengaluru, India
-                                </Typography>
-                            </Paper>
-                        </Grid>
-                    </Grid>
-
-                    <Box sx={{ my: 6 }}>
-                        <iframe
-                            title="Google Map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.905488642777!2d77.71593310258207!3d12.964608512246508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1748604724629!5m2!1sen!2sin"
-                            width="100%"
-                            height="500"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                        <Box sx={{ my: 6 }}>
+                            <iframe
+                                title="Google Map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.905488642777!2d77.71593310258207!3d12.964608512246508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1748604724629!5m2!1sen!2sin"
+                                width="100%"
+                                height="500"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </Box>
                     </Box>
-                </Box>
-            </Container>
+                </Container>
+            )}
+
         </Box>
     );
 };

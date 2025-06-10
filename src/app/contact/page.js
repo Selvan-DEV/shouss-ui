@@ -3,6 +3,6 @@ import React from 'react'
 
 export default function ContactUsPage() {
     return (
-        <ContactUsComponent />
+        <ContactUsComponent isModal={false} />
     )
 }

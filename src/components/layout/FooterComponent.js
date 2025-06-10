@@ -8,7 +8,7 @@ import {
   Divider,
   Container,
 } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Image from 'next/image';
@@ -83,19 +83,19 @@ const FooterComponent = () => {
               <Typography variant="h6" gutterBottom>Follow Us</Typography>
               <Box sx={{ display: 'flex', flexDirection: { xs: 'row', md: "column", sm: "column" }, gap: 1 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <IconButton color="error" href="#" aria-label="LinkedIn">
-                    <LinkedInIcon />
+                  <IconButton color="error" href="https://www.youtube.com/@shoussdesignandbuild" target='_blank' aria-label="LinkedIn">
+                    <YouTubeIcon />
                   </IconButton>
-                  LinkedIn
+                  YouTube
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <IconButton color="error" href="#" aria-label="Facebook">
+                  <IconButton color="error" href="https://www.facebook.com/profile.php?id=61576918063251" target='_blank' aria-label="Facebook">
                     <FacebookIcon />
                   </IconButton>
                   Facebook
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <IconButton color="error" href="#" aria-label="Instagram">
+                  <IconButton color="error" href="https://www.instagram.com/shouss_design_build?igsh=aG1oNzg4a2ZpbnBj" target='_blank' aria-label="Instagram">
                     <InstagramIcon />
                   </IconButton>
                   Instagram
