@@ -107,7 +107,7 @@ const PricingCardsComponent = () => {
 
                                     {/* Button */}
                                     <Box mt={'auto'} mb={2} textAlign="center">
-                                        <CustomButton width="200px" name="Get a Free Qoute" onClick={() => router.push('contact')} />
+                                        <CustomButton width="200px" name="Get a Free Quote" onClick={() => router.push('contact')} />
                                     </Box>
                                 </Box>
                             </Paper>
