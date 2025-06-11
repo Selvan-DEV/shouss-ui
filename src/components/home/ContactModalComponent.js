@@ -40,7 +40,7 @@ export default function ContactModalComponent(props) {
         >
           <CloseIcon />
         </IconButton>
-        <DialogContent>
+        <DialogContent sx={{ padding: "0" }}>
           <ContactUsComponent isModal={true} handleClose={handleClose} />
         </DialogContent>
       </Dialog>
