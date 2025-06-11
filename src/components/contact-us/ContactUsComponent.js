@@ -337,7 +337,7 @@ const ContactUsComponent = (props) => {
                         <Box sx={{ my: 6 }}>
                             <iframe
                                 title="Google Map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.905488642777!2d77.71593310258207!3d12.964608512246508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1748604724629!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0549542996687!2d77.57137708417649!3d13.032172480789862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17c2f7d39563%3A0x743d5290889a943b!2s164%2C%201st%20Cross%20Rd%2C%20Judicial%20Colony%2C%20AECS%20Layout%201st%20Stage%2C%20Sanjayanagara%2C%20Bengaluru%2C%20Karnataka%20560094!5e0!3m2!1sen!2sin!4v1749650894295!5m2!1sen!2sin"
                                 width="100%"
                                 height="500"
                                 style={{ border: 0 }}
