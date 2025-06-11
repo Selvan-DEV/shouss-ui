@@ -82,7 +82,7 @@ const FooterComponent = () => {
 
             <Box>
               <Typography variant="h6" gutterBottom>Follow Us</Typography>
-              <Box sx={{ display: 'flex', flexDirection: { xs: 'row', md: "column", sm: "column" }, gap: 1 }}>
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'row', md: "column", sm: "column", flexWrap: "wrap" }, gap: 1 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                   <IconButton color="error" href="https://www.linkedin.com/company/shoussdesignbuild/" target='_blank' aria-label="Instagram">
                     <LinkedInIcon />
