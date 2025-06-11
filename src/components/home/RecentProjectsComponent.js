@@ -37,13 +37,6 @@ const RecentProjects = () => {
                             Our Recent Projects
                         </Typography>
                     </Grid>
-                    <Grid size={{ xs: 12, sm: 6, md: 6 }}>
-                        <Typography variant="body1" sx={{ color: "#ccc" }}>
-                            You can use these sections to highlight the features of heading.
-                            Use these paragraphs to focus on the topic you want. Make sure you
-                            keep it short and attractive.
-                        </Typography>
-                    </Grid>
                 </Grid>
 
                 {/* Project Cards Section */}

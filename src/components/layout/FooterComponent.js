@@ -11,6 +11,7 @@ import {
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Image from 'next/image';
 import CustomButton from '../custom-button/CustomButton';
 import { useRouter } from 'next/navigation';
@@ -83,10 +84,10 @@ const FooterComponent = () => {
               <Typography variant="h6" gutterBottom>Follow Us</Typography>
               <Box sx={{ display: 'flex', flexDirection: { xs: 'row', md: "column", sm: "column" }, gap: 1 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <IconButton color="error" href="https://www.youtube.com/@shoussdesignandbuild" target='_blank' aria-label="LinkedIn">
-                    <YouTubeIcon />
+                  <IconButton color="error" href="https://www.linkedin.com/company/shoussdesignbuild/" target='_blank' aria-label="Instagram">
+                    <LinkedInIcon />
                   </IconButton>
-                  YouTube
+                  LinkedIn
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                   <IconButton color="error" href="https://www.facebook.com/profile.php?id=61576918063251" target='_blank' aria-label="Facebook">
@@ -99,6 +100,12 @@ const FooterComponent = () => {
                     <InstagramIcon />
                   </IconButton>
                   Instagram
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <IconButton color="error" href="https://www.youtube.com/@shoussdesignandbuild" target='_blank' aria-label="LinkedIn">
+                    <YouTubeIcon />
+                  </IconButton>
+                  YouTube
                 </Box>
               </Box>
             </Box>

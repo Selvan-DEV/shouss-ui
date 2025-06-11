@@ -3,6 +3,7 @@
 import React from 'react';
 import { Box, Grid, Typography, Paper, Container } from '@mui/material';
 import CustomButton from '../custom-button/CustomButton';
+import { useRouter } from 'next/navigation';
 
 const plans = [
     {
@@ -66,6 +67,8 @@ const plans = [
 
 const PricingCardsComponent = () => {
 
+    const router = useRouter();
+
     return (
         <Box sx={{ flexGrow: 1, py: 4, backgroundColor: '#fff' }}>
             <Container>
@@ -104,7 +107,7 @@ const PricingCardsComponent = () => {
 
                                     {/* Button */}
                                     <Box mt={'auto'} mb={2} textAlign="center">
-                                        <CustomButton width="200px" name="Get a Free Qoute" />
+                                        <CustomButton width="200px" name="Get a Free Qoute" onClick={() => router.push('contact')} />
                                     </Box>
                                 </Box>
                             </Paper>

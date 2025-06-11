@@ -42,9 +42,8 @@ export default function WelcomeComponent() {
             maxWidth="md"
             mx="auto"
           >
-            At sHouss Constructions, we don’t just build structures—we build dreams.
-            Whether it’s your dream home, a commercial space, or a renovation project,
-            we bring your vision to life with quality craftsmanship and unwavering commitment.
+            From concept to creation, we bring your ideas to life with precision and care. Whether you're envisioning a modern home,
+            a commercial build-out, or a transformative renovation, sHouss Constructions is your trusted partner for quality and commitment.
           </Typography>
         </Box>
 

@@ -269,6 +269,7 @@ const ContactUsComponent = (props) => {
                                 <Paper
                                     sx={{
                                         backgroundColor: '#c72d3d',
+                                        height: '100%',
                                         color: 'white',
                                         p: 3,
                                         borderRadius: 2,
@@ -281,8 +282,8 @@ const ContactUsComponent = (props) => {
                                     <Typography variant="subtitle1" mt={1}>
                                         Call Us
                                     </Typography>
-                                    <Typography variant="body1" sx={{ fontSize: "18px" }}>91123–456–7890</Typography>
-                                    <Typography variant="body1" sx={{ fontSize: "18px" }}>91123–456–7891</Typography>
+                                    <Typography variant="body1" sx={{ fontSize: "18px" }}>+91 938 098 8205</Typography>
+                                    <Typography variant="body1" sx={{ fontSize: "18px" }}>+91 636 960 7513</Typography>
 
                                 </Paper>
                             </Grid>
@@ -292,6 +293,7 @@ const ContactUsComponent = (props) => {
                                     sx={{
                                         backgroundColor: '#c72d3d',
                                         color: 'white',
+                                        height: '100%',
                                         p: 3,
                                         borderRadius: 2,
                                         textAlign: 'center',
@@ -302,8 +304,8 @@ const ContactUsComponent = (props) => {
                                     <Typography variant="subtitle1" mt={1}>
                                         Our Email
                                     </Typography>
-                                    <Typography variant="body1">info@example.com</Typography>
-                                    <Typography variant="body1">info@example.com</Typography>
+                                    <Typography variant="body1">sales@sHouss.com</Typography>
+                                    <Typography variant="body1">shahul14093@gmail.com</Typography>
                                 </Paper>
                             </Grid>
 
@@ -312,6 +314,7 @@ const ContactUsComponent = (props) => {
                                     sx={{
                                         backgroundColor: '#c72d3d',
                                         color: 'white',
+                                        height: '100%',
                                         p: 3,
                                         borderRadius: 2,
                                         textAlign: 'center',
@@ -323,8 +326,9 @@ const ContactUsComponent = (props) => {
                                         Our Location
                                     </Typography>
                                     <Typography variant="body1">
-                                        125, Central Square,<br />
-                                        Bengaluru, India
+                                        164, 1st Cross Rd, Judicial Colony,<br />
+                                        AECS Layout 1st Stage, Sanjayanagara, <br />
+                                        Bengaluru, Karnataka-560094
                                     </Typography>
                                 </Paper>
                             </Grid>
