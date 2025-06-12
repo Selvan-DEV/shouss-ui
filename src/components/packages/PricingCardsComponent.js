@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 const plans = [
     {
         title: 'Standard',
-        price: '1850/sq.ft',
+        price: 'Rs.1830/sq.ft',
         subTitle: 'Affordable, Reliable, Functional',
         description: "Perfect for budget-conscious homeowners who want quality construction with essential features:",
         features: [
@@ -26,7 +26,7 @@ const plans = [
     },
     {
         title: 'Premium',
-        price: '1999/sq.ft',
+        price: 'Rs.1970/sq.ft',
         subTitle: 'Stylish, Durable, Comfortable',
         description: "A great balance between quality and aesthetics – upgraded materials, better finishes, and modern features:",
         features: [
@@ -45,7 +45,7 @@ const plans = [
     },
     {
         title: 'Luxury',
-        price: '2500/sq.ft',
+        price: 'Rs.2270/sq.ft',
         subTitle: 'Elegant, Bespoke, Top-tier',
         description: "For those who seek the finest – high-end finishes, premium materials, and personalized design options:",
         features: [
