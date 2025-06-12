@@ -16,62 +16,37 @@ const projectData = [
     {
         title: 'Elegant Duplex Retreat',
         description: 'This stylish duplex home blends natural textures with a minimalist white exterior. Designed for modern family living, it features open terraces, warm wooden ceilings, and a lush vertical garden for a refreshing urban escape.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/04-Sourav50x70/210712_08_3D_SouravResidence.jpg',
+        imageUrl: 'https://yourdigitalfirm.com/shouss/media/16-3DFloorPlans/1-GF.jpg',
     },
     {
         title: 'Modern Corner Duplex',
         description: 'This neatly designed corner plot home combines functionality with a sleek urban aesthetic. The dual-access staircase and rooftop terrace offer flexible living, perfect for families who value both style and practicality.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/07-MalliBangalore/MALLIKARJUNA.jpg',
+        imageUrl: 'https://yourdigitalfirm.com/shouss/media/16-3DFloorPlans/2-FF.jpg',
     },
     {
         title: 'Contemporary Urban Residence',
         description: 'This vibrant, multi-level home features a striking design with bold yellow accents and clean lines. Its modern aesthetic and smart use of space make it ideal for stylish city living.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/08-SaranNagercoil/IMG-20170206-WA0036.jpg',
+        imageUrl: 'https://yourdigitalfirm.com/shouss/media/16-3DFloorPlans/2-GF.jpg',
     },
     {
         title: 'Heritage-Inspired Family Home',
         description: 'This residence draws inspiration from traditional Indian homes, evident in its pitched roof and welcoming outdoor spaces. It provides a spacious and culturally rich environment for family life in India.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/09-SeetharamNagercoil/Seetha_Finalevening_Revised102023.jpg',
+        imageUrl: 'https://yourdigitalfirm.com/shouss/media/16-3DFloorPlans/3-FF.jpg',
     },
     {
         title: 'Elegant Modern Duplex',
         description: 'This stylish duplex features a clean, minimalist design with multiple balconies and a contemporary facade, offering bright and spacious living areas. Its refined aesthetic is perfect for upscale urban lifestyles.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/13-AarushNagercoil/df.jpg',
+        imageUrl: 'https://yourdigitalfirm.com/shouss/media/16-3DFloorPlans/3-GF.jpg',
     },
     {
         title: 'Neoclassical Inspired Residence',
         description: 'This grand home showcases a classic, elegant design with prominent pillars, decorative window frames, and wrought-iron balconies, evoking a sense of timeless sophistication.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/14-RakeshBangalure/RAKESHBASIFINAL.bmp',
+        imageUrl: 'https://yourdigitalfirm.com/shouss/media/16-3DFloorPlans/5-FF.jpg',
     },
     {
         title: 'Charming South Indian Villa',
         description: 'This inviting home features a blend of contemporary design with subtle traditional elements, including a distinctive red-tiled roof and well-integrated balconies. It offers a comfortable and stylish living space, ideal for a modern Indian family.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/15-DeviAnandh/01_10_Photo.jpg',
-    },
-    {
-        title: 'Mediterranean-Inspired Villa',
-        description: 'This charming home features a distinctive blend of warm stone cladding, an arched entrance, and a red-tiled roof, exuding a Mediterranean charm.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/17-VillaProjectsBangalore/222.jpg',
-    },
-    {
-        title: 'Expansive Suburban Residence',
-        description: 'This sprawling home boasts a classic yet contemporary design with multiple rooflines and extensive verandas, blending seamlessly into a lush, green setting.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/18-AnupGosh/F1HQ.jpg',
-    },
-    {
-        title: 'Stylish Compact Residence',
-        description: 'This modern house offers a contemporary design with a minimalist aesthetic, featuring a flat roofline and a integrated garage.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/20-VigneshNagercoil/V2-edit.jpg',
-    },
-    {
-        title: 'Contemporary Budget Villa',
-        description: 'This modern villa features a clean, minimalist design with contrasting textures and a prominent car porch, offering a contemporary aesthetic within a practical layout. It provides a stylish yet economical living solution, perfect for those seeking modern design on a budget in India.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/21-BudgetHomeNagercoil/C2.jpg',
-    },
-    {
-        title: 'Modern Vertical Home',
-        description: 'This striking home features a unique vertical design with a prominent peaked roof and intricate screen patterns, blending contemporary aesthetics with traditional Indian architectural cues.',
-        imageUrl: 'https://yourdigitalfirm.com/shouss/media/22-SanthoshBangalore/Mr.Santhosh_002.jpg',
+        imageUrl: 'https://yourdigitalfirm.com/shouss/media/16-3DFloorPlans/5-FF.jpg',
     },
 ];
 

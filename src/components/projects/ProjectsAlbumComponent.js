@@ -18,7 +18,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                    {children}
                 </Box>
             )}
         </Box>
@@ -66,7 +66,7 @@ export default function ProjectsAlbumComponent() {
                         }}
                     >
                         <Tab
-                            label="Architectural Portfolio"
+                            label="Residential Projects"
                             sx={{
                                 color: value === 0 ? 'var(--app-primary-color)' : '#fff',
                                 fontWeight: value === 0 ? 'bold' : 'normal',
@@ -88,8 +88,6 @@ export default function ProjectsAlbumComponent() {
                         <Project3dGrid />
                     </TabPanel>
                 </Box>
-
-
             </Container>
         </Box>
     )
