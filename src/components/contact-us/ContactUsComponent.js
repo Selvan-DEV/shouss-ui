@@ -18,6 +18,7 @@ import {
 } from '@mui/icons-material';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import CustomButton from '../custom-button/CustomButton';
+import { AppContants } from '@/constants/AppConstants';
 
 const schema = yup.object({
     fullName: yup.string().required('Full name is required'),
@@ -304,8 +305,8 @@ const ContactUsComponent = (props) => {
                                     <Typography variant="subtitle1" mt={1}>
                                         Our Email
                                     </Typography>
-                                    <Typography variant="body1">sales@sHouss.com</Typography>
-                                    <Typography variant="body1">shahul14093@gmail.com</Typography>
+                                    <Typography variant="body1">{AppContants.PrimaryEmail}</Typography>
+                                    <Typography variant="body1">{AppContants.SecondaryEmail}</Typography>
                                 </Paper>
                             </Grid>
 

@@ -23,6 +23,7 @@ const navItems = [
   { page: "Home", url: "/" },
   { page: "About Us", url: "/about" },
   { page: "Services", url: "/services" },
+  { page: "Projects", url: "/projects" },
   { page: "Packages", url: "/packages" },
 ];
 

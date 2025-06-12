@@ -16,6 +16,7 @@ import Image from 'next/image';
 import CustomButton from '../custom-button/CustomButton';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { AppContants } from '@/constants/AppConstants';
 
 const FooterComponent = () => {
   const router = useRouter();
@@ -76,8 +77,8 @@ const FooterComponent = () => {
               <Typography variant="body2" sx={{ mb: 2 }}>164, 1st Cross Rd, Judicial Colony</Typography>
               <Typography variant="body2" sx={{ mb: 2 }}>AECS Layout 1st Stage, Sanjayanagara</Typography>
               <Typography variant="body2" sx={{ mb: 2 }}>Bengaluru, Karnataka-560094</Typography>
-              <Typography variant="body2" sx={{ mb: 2 }}>+91 938 098 8205</Typography>
-              <Typography variant="body2" sx={{ mb: 2 }}>+91 636 960 7513</Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>{AppContants.PrimaryPhone}</Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>{AppContants.SecondaryPhone}</Typography>
             </Box>
 
             <Box>

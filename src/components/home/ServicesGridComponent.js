@@ -1,10 +1,5 @@
 import React from "react";
 import { Box, Typography, Paper, Container } from "@mui/material";
-import ArchitectureIcon from "@mui/icons-material/Straighten";
-import BrickIcon from "@mui/icons-material/Texture";
-import NatureIcon from "@mui/icons-material/Yard";
-import PlanningIcon from "@mui/icons-material/GridOn";
-import InteriorIcon from "@mui/icons-material/Chair";
 import Image from "next/image";
 
 const services = [

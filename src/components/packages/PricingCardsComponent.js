@@ -1,9 +1,50 @@
 "use client";
 
 import React from 'react';
-import { Box, Grid, Typography, Paper, Container } from '@mui/material';
+import { Box, Grid, Typography, Paper, Container, Button } from '@mui/material';
 import CustomButton from '../custom-button/CustomButton';
 import { useRouter } from 'next/navigation';
+import { styled, keyframes } from '@mui/system';
+
+// Animation for the radiant blinking effect
+// Animation for glowing dot along the border
+const moveDot = keyframes`
+  0%   { top: 0; left: 0; }
+  25%  { top: 0; left: 100%; transform: translate(-50%, 0); }
+  50%  { top: 100%; left: 100%; transform: translate(-50%, -50%); }
+  75%  { top: 100%; left: 0; transform: translate(0, -50%); }
+  100% { top: 0; left: 0; }
+`;
+
+// Styled Button with animated dot
+const AnimatedBorderButton = styled(Button)(({ theme }) => ({
+    position: 'relative',
+    background: 'var(--app-primary-color)',
+    color: '#fff',
+    padding: '8px 24px',
+    fontWeight: 'bold',
+    textTransform: 'none',
+    overflow: 'hidden',
+    width: "100%",
+    letterSpacing: "3px",
+    fontSize: "15px",
+
+    '&::before': {
+        content: '""',
+        position: 'absolute',
+        width: '8px',
+        height: '8px',
+        backgroundColor: '#fff',
+        borderRadius: '50%',
+        boxShadow: '0 0 8px 4px rgba(255, 255, 255, 0.6)',
+        animation: `${moveDot} 5s linear infinite`,
+        zIndex: 1,
+    },
+
+    // '&:hover': {
+    //     background: 'linear-gradient(to top, #d32f2f, #ff6659)',
+    // },
+}));
 
 const plans = [
     {
@@ -75,6 +116,9 @@ const PricingCardsComponent = () => {
                 <Grid container spacing={4} justifyContent="center">
                     {plans.map((plan, index) => (
                         <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                            <Box sx={{ height: "40px", borderRadius: "5px", marginBottom: "20px", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                {plan.title === 'Premium' ? <AnimatedBorderButton>Recommended</AnimatedBorderButton> : ''}
+                            </Box>
                             <Paper elevation={4} sx={{ borderRadius: 3, overflow: 'hidden' }}>
                                 {/* Top Section */}
                                 <Box sx={{ backgroundColor: 'var(--app-primary-color)', p: 2, textAlign: 'center' }}>
