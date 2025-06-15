@@ -8,10 +8,10 @@ import { Box } from "@mui/material";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const Images = [
+  { id: 3, src: "/images/HomeSliders/slider-3.png" },
   { id: 2, src: "/images/HomeSliders/slider-2.png" },
   { id: 3, src: "/images/HomeSliders/slider-7.png" },
   { id: 1, src: "/images/HomeSliders/slider-1.png" },
-  { id: 3, src: "/images/HomeSliders/slider-3.png" },
   { id: 3, src: "/images/HomeSliders/slider-4.png" },
   { id: 3, src: "/images/HomeSliders/slider-5.png" },
 ];
